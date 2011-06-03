@@ -1,0 +1,20 @@
+global(){
+}
+
+setup(){
+	pinMode(13,OUTPUT);
+}
+
+loop(){
+	int speedBlink=0;
+	String temp="$dd[0].str";
+	if(temp.equals("FAST")) speedBlink = 200;
+	else speedBlink=1000;
+	
+	digitalWrite(13 ,(millis()/speedBlink)%2);
+}
+
+endLoop(){	
+}
+
+~ath

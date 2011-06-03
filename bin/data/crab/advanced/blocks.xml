@@ -1,0 +1,189 @@
+<blocks font="ArialNarrow.ttf" xmlns:blck="http://www.smm.org/">
+	<bar name="sequences" color="883710">
+		<block name="right claw click">
+			<seq>1</seq>
+			<cond>1</cond>
+            <blocksIn>
+				<block name="right claw %d" color="0x993399">
+					<type>p</type>
+					<dropdown>
+						<dds>OPEN</dds>
+						<dds>CLOSE</dds>
+						<selected>OPEN</selected>
+					</dropdown>
+					<file>rclaw.blk</file>
+					<part>right claw click</part>
+					<part>if right claw open</part>
+				</block>
+				<block name="delay %d second" color="0xFF6600">
+					<type>d</type>
+					<dropdown>
+						<ddlow>0</ddlow>
+						<ddhigh>1</ddhigh>
+						<selected>1</selected>
+					</dropdown>
+					<file>delay.blk</file>
+				</block>
+				<block name="right claw %d" color="0x993399">
+					<type>p</type>
+					<dropdown>
+						<dds>OPEN</dds>
+						<dds>CLOSE</dds>
+						<selected>CLOSE</selected>
+					</dropdown>
+					<file>rclaw.blk</file>
+					<part>right claw click</part>
+					<part>if right claw open</part>
+				</block>
+				<block name="delay %d second" color="0xFF6600">
+					<type>d</type>
+					<dropdown>
+						<ddlow>0</ddlow>
+						<ddhigh>1</ddhigh>
+						<selected>1</selected>
+					</dropdown>
+					<file>delay.blk</file>
+				</block>
+			</blocksIn>
+			<file>sequence.blk</file>
+		</block>
+		<block name="left claw click">
+			<seq>1</seq>
+			<cond>1</cond>
+            <blocksIn>
+				<block name="left claw %d" color="0x993399">
+					<type>p</type>
+					<dropdown>
+						<dds>OPEN</dds>
+						<dds>CLOSE</dds>
+						<selected>OPEN</selected>
+					</dropdown>
+					<file>lclaw.blk</file>
+					<part>left claw click</part>
+					<part>if left claw open</part>
+				</block>
+				<block name="delay %d second" color="0xFF6600">
+					<type>d</type>
+					<dropdown>
+						<ddlow>0</ddlow>
+						<ddhigh>1</ddhigh>
+						<selected>1</selected>
+					</dropdown>
+					<file>delay.blk</file>
+				</block>
+				<block name="left claw %d" color="0x993399">
+					<type>p</type>
+					<dropdown>
+						<dds>OPEN</dds>
+						<dds>CLOSE</dds>
+						<selected>CLOSE</selected>
+					</dropdown>
+					<file>lclaw.blk</file>
+					<part>left claw click</part>
+					<part>if left claw open</part>
+				</block>
+				<block name="delay %d second" color="0xFF6600">
+					<type>d</type>
+					<dropdown>
+						<ddlow>0</ddlow>
+						<ddhigh>1</ddhigh>
+						<selected>1</selected>
+					</dropdown>
+					<file>delay.blk</file>
+				</block>
+			</blocksIn>
+			<file>sequence.blk</file>
+		</block>
+	</bar>
+	<bar name="actions" color="0x993399">
+		<block name="right claw %d">
+			<type>p</type>
+            <dropdown>
+                <dds>OPEN</dds>
+                <dds>CLOSE</dds>
+            </dropdown>
+			<file>rclaw.blk</file>
+			<part>right claw click</part>
+			<part>if right claw open</part>
+		</block>
+		<block name="left claw %d">
+            <dropdown>
+                <dds>OPEN</dds>
+                <dds>CLOSE</dds>
+            </dropdown>
+			<file>lclaw.blk</file>
+			<part>left claw click</part>
+		</block>
+		<block name="shake speed %d">
+			<dropdown>
+				<dds>STOP</dds>
+                <dds>SLOW</dds>
+				<dds>MED</dds>
+				<dds>FAST</dds>
+            </dropdown>
+			<file>shake.blk</file>
+		</block>
+		<block name="eye color %d">
+            <dropdown>
+                <dds>RED</dds>
+                <dds>GREEN</dds>
+                <dds>BLUE</dds>
+                <dds>OFF</dds>
+            </dropdown>
+			<file>eyes.blk</file>
+            <part>eye color shift</part>
+		</block>
+	</bar>
+	<bar name="timing" color="0xFF6600">
+		<block name="for %d seconds">
+			<type>c</type>
+			<cond>1</cond>
+            <dropdown>
+                <ddlow>0</ddlow>
+                <ddhigh>10</ddhigh>
+            </dropdown>
+			<file>forSeconds.blk</file>
+		</block>
+		<block name="delay %d second">
+			<type>d</type>
+            <dropdown>
+                <ddlow>0</ddlow>
+                <ddhigh>1</ddhigh>
+            </dropdown>
+			<file>delay.blk</file>
+		</block>
+		<block name="repeat %d times">
+			<type>F</type>
+			<cond>1</cond>
+            <dropdown>
+                <ddlow>0</ddlow>
+                <ddhigh>10</ddhigh>
+                <ddsteps>11</ddsteps>
+            </dropdown>
+			<file>repeat.blk</file>
+		</block>
+		<block name="once">
+			<cond>1</cond>
+			<file>once.blk</file>
+		</block>
+	</bar>
+	<bar name="conditional" color="896016">
+		<block name="if button pressed">
+			<cond>1</cond>
+			<file>ifBP.blk</file>
+		</block>
+        <block name="if right claw open">
+            <cond>1</cond>
+            <file>ifROpen.blk</file>
+			<part>right claw click</part>
+			<part>right claw</part>
+        </block>
+		<block name="if left claw open">
+            <cond>1</cond>
+            <file>ifLOpen.blk</file>
+			<part>left claw click</part>
+			<part>left claw</part>
+        </block>
+	</bar>
+</blocks>
+	

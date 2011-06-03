@@ -1,0 +1,25 @@
+global(){
+	~int rPin=5,gPin=6,bPin=11;
+	~int eyeR,eyeG,eyeB;
+	~String tempEyes;
+}
+
+setup(){
+}
+
+loop(){
+	tempEyes="$dds.var";
+	if(tempEyes.equals("RED")) eyeR = 255;
+	else if(tempEyes.equals("GREEN")) eyeG = 255;
+	else if(tempEyes.equals("BLUE")) eyeB = 255;	
+	else eyeR=eyeB=eyeG=0;
+	
+	analogWrite(rPin,eyeR);
+	analogWrite(gPin,eyeG);
+	analogWrite(bPin,eyeB);
+}
+
+endLoop(){
+}
+
+~ath

@@ -1,0 +1,16 @@
+global(){
+}
+
+setup(){
+}
+
+loop(){
+	for(int i=0; i<$dd1.var; i++){
+		$blockIn
+	}
+}
+
+endLoop(){
+}
+
+~ath

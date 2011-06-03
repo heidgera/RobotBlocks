@@ -1,0 +1,134 @@
+<blocks font="ArialNarrow.ttf" xmlns:blck="http://www.smm.org/">
+	<bar name="motion" color="324288">
+		<block name="flipper angle %n">
+			<type>p</type>
+            <ddlow>0</ddlow>
+			<ddhigh>90</ddhigh>
+			<file>flip.blk</file>
+			<part>move flippers</part>
+		</block>
+		<block name="tail angle %n">
+			<type>a</type>
+            <ddlow>0</ddlow>
+			<ddhigh>90</ddhigh>
+			<file>tail.blk</file>
+			<part>move tail</part>
+		</block>
+		<block name="wriggle speed %n">
+			<type>g</type>
+			<ddlow>0</ddlow>
+			<ddhigh>100</ddhigh>
+			<file>wriggle.blk</file>
+		</block>
+	</bar>
+	<bar name="control" color="896016">
+		<block name="repeat %n times">
+			<type>F</type>
+			<cond>1</cond>
+            <dropdown>
+                <ddlow>0</ddlow>
+                <ddhigh>10</ddhigh>
+            </dropdown>
+			<file>repeat.blk</file>
+		</block>
+		<block name="if %b">
+			<type>i</type>
+			<ifblock>true</ifblock>
+			<cond>1</cond>
+			<file>if.blk</file>
+		</block>
+        <block name="while %b">
+            <cond>1</cond>
+            <ifblock>true</ifblock>
+            <file>while.blk</file>
+        </block>
+	</bar>
+    <bar name="operators" color="367116">
+        <block name="%b + %b">
+            <num>true</num>
+            <file>add.blk</file>
+        </block>
+        <block name="%b < %b">
+            <num>true</num>
+            <file>add.blk</file>
+        </block>
+        <block name="%b > %b">
+            <num>true</num>
+            <file>add.blk</file>
+        </block>
+    </bar>
+	<bar name="timing" color="883710">
+		<block name="for %n seconds">
+			<type>c</type>
+			<cond>1</cond>
+			<ddlow>0</ddlow>
+			<ddhigh>10</ddhigh>
+			<file>forSeconds.blk</file>
+		</block>
+		<block name="repeat forever">
+			<cond>1</cond>
+			<file>forever.blk</file>
+		</block>
+		<block name="delay %n second">
+			<type>d</type>
+			<ddlow>0</ddlow>
+			<ddhigh>1</ddhigh>
+			<file>delay.blk</file>
+		</block>
+	</bar>
+	<bar name="sensing" color="155890">
+		<block name="button pressed">
+			<wid>90</wid>
+			<hgt>25</hgt>
+            <num>true</num>
+			<type>b</type>
+			<file>button.blk</file>
+		</block>
+        <block name="arduino led %s">
+            <type>m</type>
+            <dds>ON</dds>
+            <dds>OFF</dds>
+			<file>led.blk</file>
+		</block>
+        <block name="pin %n %s">
+            <ddlow>2</ddlow>
+            <ddhigh>12</ddhigh>
+            <dds>HIGH</dds>
+            <dds>LOW</dds>
+            <file>digitalWrite.blk</file>
+        </block>
+	</bar>
+	<bar name="automation" color="126447">
+		<block name="move flippers %s">
+			<type>L</type>
+            <dds>STOP</dds>
+			<dds>SLOW</dds>
+			<dds>MED</dds>
+			<dds>FAST</dds>
+			<file>autoFlip.blk</file>
+			<part>flipper angle</part>
+		</block>
+		<block name="move tail %s">
+			<type>T</type>
+            <dds>STOP</dds>
+			<dds>SLOW</dds>
+			<dds>MED</dds>
+			<dds>FAST</dds>
+			<file>autoTail.blk</file>
+			<part>tail angle</part>
+		</block>
+	</bar>
+	<bar name="sound" color="841688">
+		<block name="play sound %s">
+			<type>S</type>
+            <dds>GLUB</dds>
+			<dds>BUBBLE</dds>
+			<file>playSound.blk</file>
+		</block>
+		<block name="stop sounds">
+			<type>A</type>
+			<file>stopSound.blk</file>
+		</block>
+	</bar>
+</blocks>
+	

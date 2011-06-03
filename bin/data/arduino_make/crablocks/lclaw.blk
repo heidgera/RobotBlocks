@@ -1,0 +1,24 @@
+global(){
+	@#include <Servo.h>
+	@Servo leftClaw;
+	@int lclawPin=8;
+	@int lclawState;
+	@String tempLClaw;
+}
+
+setup(){
+	leftClaw.attach(lclawPin);
+}
+
+loop(){
+	tempLClaw="$dds.var";
+	if(tempLClaw.equals("OPEN")) lclawState = 65;
+	else lclawState=130;
+	
+	leftClaw.write(lclawState);
+}
+
+endLoop(){
+}
+
+~ath

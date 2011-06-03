@@ -1,0 +1,53 @@
+global(){
+	~int rPin=5,gPin=6,bPin=11;
+	~int eyeR,eyeG,eyeB;
+	~String tempEyes;
+}
+
+setup(){
+}
+
+loop(){
+	/*tempEyes="$dd[0].str";
+	if(tempEyes.equals("RED")) eyeR = 255;
+	else if(tempEyes.equals("GREEN")) eyeG = 255;
+	else if(tempEyes.equals("BLUE")) eyeB = 255;	
+	else eyeR=eyeB=eyeG=0;*/
+	for(int i=0;i<255;i++){
+		analogWrite(bPin,i);
+		delay(2);
+	}
+	for(int i=0;i<255;i++){
+		analogWrite(rPin,i);
+		delay(5);
+	}
+	for(int i=255;i>=0;i--){
+		//analogWrite(bPin,i);
+		analogWrite(gPin,255-i);
+		analogWrite(rPin,i);
+		delay(5);
+	}
+	for(int i=255;i>=0;i--){
+		//analogWrite(bPin,i);
+		analogWrite(rPin,255-i);
+		analogWrite(bPin,i);
+		delay(5);
+	}
+	for(int i=255;i>=0;i--){
+		//analogWrite(bPin,i);
+		analogWrite(bPin,255-i);
+		delay(5);
+	}
+	for(int i=255;i>=0;i--){
+		//analogWrite(bPin,i);
+		analogWrite(gPin,i);
+		analogWrite(rPin,i);
+		analogWrite(bPin,i);
+		delay(5);
+	}
+}
+
+endLoop(){
+}
+
+~ath

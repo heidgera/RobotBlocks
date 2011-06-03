@@ -1,0 +1,68 @@
+<blocks font="ArialNarrow.ttf" xmlns:blck="http://www.smm.org/">
+	<bar name="actions" color="324288">
+		<block name="move flippers %d">
+			<type>L</type>
+            <dropdown>
+                <dds>STOP</dds>
+                <dds>SLOW</dds>
+                <dds>MED</dds>
+                <dds>FAST</dds>
+            </dropdown>
+			<file>autoFlip.blk</file>
+			<part>flipper angle</part>
+		</block>
+		<block name="move tail %d">
+			<type>T</type>
+            <dropdown>
+                <dds>STOP</dds>
+                <dds>SLOW</dds>
+                <dds>MED</dds>
+                <dds>FAST</dds>
+            </dropdown>
+			<file>autoTail.blk</file>
+			<part>tail angle</part>
+		</block>
+		<block name="wriggle speed %d">
+			<type>g</type>
+			<dropdown>
+				<dds>STOP</dds>
+                <dds>SLOW</dds>
+				<dds>MED</dds>
+				<dds>FAST</dds>
+            </dropdown>
+			<file>wriggle.blk</file>
+		</block>
+		<block name="blink led %d">
+			<dropdown>
+				<dds>SLOW</dds>
+				<dds>FAST</dds>
+			</dropdown>
+			<file>blink.blk</file>
+		</block>
+		<block name="play sound %d">
+			<type>S</type>
+            <dropdown>
+                <dds>GLUB</dds>
+                <dds>BUBBLE</dds>
+            </dropdown>
+			<file>playSound.blk</file>
+		</block>
+		<block name="stop sounds">
+			<type>A</type>
+			<file>stopSound.blk</file>
+		</block>
+	</bar>
+	<bar name="timing" color="883710">
+		<block name="for %d seconds">
+			<type>c</type>
+			<cond>1</cond>
+            <dropdown>
+                <ddlow>0</ddlow>
+                <ddhigh>10</ddhigh>
+            </dropdown>
+			<file>forSeconds.blk</file>
+		</block>
+	</bar>
+	
+</blocks>
+	

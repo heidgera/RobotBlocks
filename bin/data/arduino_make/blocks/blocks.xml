@@ -1,0 +1,115 @@
+<blocks xmlns:blck="http://www.smm.org/">
+	<bar name="motion" color="324288">
+		<block name="flipper angle">
+			<type>p</type>
+			<ddhigh>90</ddhigh>
+			<dd1x>100</dd1x>
+			<file>flip.blk</file>
+			<part>move flippers</part>
+		</block>
+		<block name="tail angle">
+			<type>a</type>
+			<ddhigh>90</ddhigh>
+			<dd1x>100</dd1x>
+			<file>tail.blk</file>
+			<part>move tail</part>
+		</block>
+		<block name="wriggle speed">
+			<type>g</type>
+			<ddlow>0</ddlow>
+			<ddhigh>100</ddhigh>
+			<dd1x>100</dd1x>
+			<file>wriggle.blk</file>
+		</block>
+	</bar>
+	<bar name="control" color="896016">
+		<block name="repeat        times">
+			<type>F</type>
+			<cond>1</cond>
+			<ddhigh>10</ddhigh>
+			<dd1x>70</dd1x>
+			<file>repeat.blk</file>
+		</block>
+		<block name="if">
+			<type>i</type>
+			<ifblock>true</ifblock>
+			<cond>1</cond>
+			<file>if.blk</file>
+		</block>
+	</bar>
+	<bar name="timing" color="883710">
+		<block name="for       seconds">
+			<type>c</type>
+			<cond>1</cond>
+			<ddlow>0</ddlow>
+			<ddhigh>10</ddhigh>
+			<dd1x>45</dd1x>
+			<file>forSeconds.blk</file>
+		</block>
+		<block name="repeat forever">
+			<cond>1</cond>
+			<file>forever.blk</file>
+		</block>
+		<block name="delay       second">
+			<type>d</type>
+			<ddlow>0</ddlow>
+			<ddhigh>1</ddhigh>
+			<dd1x>50</dd1x>
+			<file>delay.blk</file>
+		</block>
+	</bar>
+	<bar name="sensing" color="155890">
+		<block name="button pressed">
+			<wid>90</wid>
+			<hgt>25</hgt>
+			<type>b</type>
+			<file>button.blk</file>
+		</block>
+        <block name="arduino led">
+            <type>m</type>
+            <dds>ON</dds>
+            <dds>OFF</dds>
+            <ddsx>100</ddsx>
+			<file>led.blk</file>
+		</block>
+	</bar>
+	<bar name="automation" color="367116">
+		<block name="move flippers">
+			<type>L</type>
+            <dds>STOP</dds>
+			<dds>SLOW</dds>
+			<dds>MED</dds>
+			<dds>FAST</dds>
+			<ddsx>95</ddsx>
+			<ddsw>45</ddsw>
+			<file>autoFlip.blk</file>
+			<part>flipper angle</part>
+		</block>
+		<block name="move tail">
+			<type>T</type>
+            <dds>STOP</dds>
+			<dds>SLOW</dds>
+			<dds>MED</dds>
+			<dds>FAST</dds>
+			<ddsx>90</ddsx>
+			<ddsw>50</ddsw>
+			<file>autoTail.blk</file>
+			<part>tail angle</part>
+		</block>
+	</bar>
+	<bar name="sound" color="841688">
+		<block name="play sound">
+			<type>S</type>
+			<dds>BUBBLE</dds>
+			<dds>GLUB</dds>
+			<ddsx>80</dds>
+			<ddsw>60</ddsw>
+			<file>playSound.blk</file>
+		</block>
+		<block name="stop sounds">
+			<type>A</type>
+			<file>stopSound.blk</file>
+		</block>
+	</bar>
+</blocks>
+	

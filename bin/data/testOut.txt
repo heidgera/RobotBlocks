@@ -1,0 +1,20 @@
+here
+exporting /dev/tty.usbserial-FTF61JDO to makefile
+# Here is the "preprocessing".
+# It creates a .cpp file based with the same name as the .pde file.
+# On top of the new .cpp file comes the WProgram.h header.
+# and prototypes for setup() and Loop()
+# Then the .cpp file will be compiled. Errors during compile will
+# refer to this new, automatically generated, file.
+# Not the original .pde file you actually edit...
+echo ../Arduino/libraries/AFMotor ../Arduino/libraries/Wire ../Arduino/libraries/Servo
+../Arduino/libraries/AFMotor ../Arduino/libraries/Wire ../Arduino/libraries/Servo
+test -d applet || mkdir applet
+echo '#include "WProgram.h"' > applet/arduino_make.cpp
+echo 'void setup();' >> applet/arduino_make.cpp
+echo 'void loop();' >> applet/arduino_make.cpp
+cat arduino_make.pde >> applet/arduino_make.cpp
+../Arduino/tools/avr/bin/avr-g++ -c -g -Os -w       -fno-exceptions -ffunction-sections -fdata-sections -DF_CPU=16000000L -DARDUINO=20 -I../Arduino/arduino -I-I../Arduino/libraries/AFMotor -I../Arduino/libraries/Wire -I../Arduino/libraries/Servo -mmcu=atmega328p applet/arduino_make.cpp -o applet/arduino_make.o
+../Arduino/tools/avr/bin/avr-gcc -Os -lm -Wl,--gc-sections -mmcu=atmega328p -o applet/arduino_make.elf applet/arduino_make.o applet/core.a
+../Arduino/tools/avr/bin/avr-objcopy -O ihex -R .eeprom applet/arduino_make.elf applet/arduino_make.hex
+../Arduino/tools/avr/bin/avrdude -V -F -C ../Arduino/tools/avr/etc/avrdude.conf -p atmega328p -P /dev/tty.usbserial-FTF61JDO -c stk500v1 -b 57600 -U flash:w:applet/arduino_make.hex

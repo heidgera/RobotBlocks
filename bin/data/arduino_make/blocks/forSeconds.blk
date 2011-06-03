@@ -1,0 +1,18 @@
+global(){
+	@unsigned long fortimer=0;
+}
+
+setup(){
+}
+
+loop(){
+	fortimer=millis()+$dd1.var *1000;
+	while(millis()<fortimer){
+		$blockIn
+	}
+}
+
+endLoop(){
+}
+
+~ath

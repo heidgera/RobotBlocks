@@ -1,0 +1,127 @@
+<blocks font="ArialNarrow.ttf" xmlns:blck="http://www.smm.org/">
+	<bar name="automation" color="324288">
+		<block name="move flippers %d">
+			<type>L</type>
+            <dropdown>
+                <dds>STOP</dds>
+                <dds>SLOW</dds>
+                <dds>MED</dds>
+                <dds>FAST</dds>
+            </dropdown>
+			<file>autoFlip.blk</file>
+			<part>flipper angle</part>
+		</block>
+		<block name="move tail %d">
+			<type>T</type>
+            <dropdown>
+                <dds>STOP</dds>
+                <dds>SLOW</dds>
+                <dds>MED</dds>
+                <dds>FAST</dds>
+            </dropdown>
+			<file>autoTail.blk</file>
+			<part>tail angle</part>
+		</block>
+		<block name="wriggle speed %d">
+			<type>g</type>
+			<dropdown>
+                <dds>SLOW</dds>
+				<dds>MED</dds>
+				<dds>FAST</dds>
+            </dropdown>
+			<file>wriggle.blk</file>
+		</block>
+		<block name="blink led %d">
+			<dropdown>
+				<dds>SLOW</dds>
+				<dds>FAST</dds>
+			</dropdown>
+			<file>blink.blk</file>
+		</block>
+	</bar>
+	<bar name="actions" color="126447">
+		<block name="flipper angle %d">
+			<type>p</type>
+            <dropdown>
+                <ddlow>0</ddlow>
+                <ddhigh>90</ddhigh>
+            </dropdown>
+			<file>flip.blk</file>
+			<part>move flippers</part>
+		</block>
+		<block name="tail angle %d">
+			<type>a</type>
+            <dropdown>
+                <ddlow>0</ddlow>
+                <ddhigh>90</ddhigh>
+            </dropdown>
+			<file>tail.blk</file>
+			<part>move tail</part>
+		</block>
+		<block name="arduino led %d">
+            <type>m</type>
+            <dropdown>
+                <dds>ON</dds>
+                <dds>OFF</dds>
+            </dropdown>
+			<file>led.blk</file>
+		</block>
+		<block name="play sound %d">
+			<type>S</type>
+            <dropdown>
+                <dds>GLUB</dds>
+                <dds>BUBBLE</dds>
+            </dropdown>
+			<file>playSound.blk</file>
+		</block>
+		<block name="stop sounds">
+			<type>A</type>
+			<file>stopSound.blk</file>
+		</block>
+	</bar>
+	<bar name="timing" color="883710">
+		<block name="for %d seconds">
+			<type>c</type>
+			<cond>1</cond>
+            <dropdown>
+                <ddlow>0</ddlow>
+                <ddhigh>10</ddhigh>
+            </dropdown>
+			<file>forSeconds.blk</file>
+		</block>
+		<block name="delay %d second">
+			<type>d</type>
+            <dropdown>
+                <ddlow>0</ddlow>
+                <ddhigh>1</ddhigh>
+            </dropdown>
+			<file>delay.blk</file>
+		</block>
+		<block name="repeat %d times">
+			<type>F</type>
+			<cond>1</cond>
+            <dropdown>
+                <ddlow>0</ddlow>
+                <ddhigh>10</ddhigh>
+                <ddsteps>11</ddsteps>
+            </dropdown>
+			<file>repeat.blk</file>
+		</block>
+		<block name="once">
+			<cond>1</cond>
+			<file>once.blk</file>
+		</block>
+	</bar>
+	<bar name="conditional" color="896016">
+		
+		<block name="if button pressed">
+			<cond>1</cond>
+			<file>ifBP.blk</file>
+		</block>
+        <block name="while button pressed">
+            <cond>1</cond>
+            <file>whileBP.blk</file>
+        </block>
+	</bar>
+</blocks>
+	

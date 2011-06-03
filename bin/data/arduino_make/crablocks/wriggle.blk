@@ -1,0 +1,16 @@
+global(){
+	@int wrigPin=3;
+}
+
+setup(){
+	pinMode(wrigPin,OUTPUT);
+}
+
+loop(){
+	analogWrite(wrigPin,$dd1.var *2+50);
+}
+
+endLoop(){
+}
+
+~ath
